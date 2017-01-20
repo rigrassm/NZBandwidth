@@ -46,7 +46,6 @@ def plexpy_get_activity():
 
 
 def nzbget_set_rate(rate=0):
-    """:returns bool"""
 
     # Build a JSON-RPC compatible object which tells nzb what to set the speed limit to
     data = dict(method="rate", params=rate, jsonrpc="2.0", id=0)
