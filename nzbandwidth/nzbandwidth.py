@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 from __future__ import print_function, unicode_literals, division
 import requests
 from time import sleep
@@ -87,7 +86,6 @@ def calculate_rate(rate="unlimited"):
         # NZBGet sets the rate in KBps(Kilobytes per second) while most humans use Mbps(Megabits per second) so
         # we set our connection_speed in Mbps and then convert the new rate to KBps
         new_rate = round((((connection_speed * rate_limits[rate]) / 8) * 1024))
-        print('New Rate: {}'.format(new_rate))
         return new_rate
 
 
@@ -131,7 +129,7 @@ def main():
             set_rate_result = nzbget_set_rate(rate=new_rate)
 
             if set_rate_result is True:
-                print("New rate limit: {rate}".format(rate=new_rate))
+                print("New rate limit: {rate} KB/s".format(rate=new_rate))
                 prev_stream_count = stream_count
 
             else:
