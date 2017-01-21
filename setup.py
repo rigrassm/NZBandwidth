@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name='NZBandwidth',
-    version='0.1.0',
+    version='0.1.1',
     author='Ricky Grassmuck',
     author_email='rigrassm@gmail.com',
     packages=['nzbandwidth'],
